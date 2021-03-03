@@ -47,5 +47,5 @@ export const formatByteSize = (
     index++;
   }
 
-  return postProcess(numberOfBytes, knownUnits[index]);
+  return postProcess(theNumber, knownUnits[index]);
 };
