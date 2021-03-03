@@ -1,10 +1,11 @@
 {
   "name": "@theredhead/formatbytesize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Format bytes in a human readable way without giving up on flexibility",
   "main": "dist/formatByteSize.js",
   "scripts": {
     "build": "tsc -p .",
+    "publish": "npm publish --access public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -14,8 +15,16 @@
     "formatter"
   ],
   "author": "kris@theredhead.nl",
+  "repository": {
+    "url": "git+https://github.com/theredhead/formatByteSize.git"
+  },
   "license": "WTFPL",
   "devDependencies": {
     "typescript": "^4.2.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/theredhead/formatByteSize/issues"
+  },
+  "homepage": "https://github.com/theredhead/formatByteSize#readme",
+  "dependencies": {}
 }

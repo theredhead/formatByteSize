@@ -8,10 +8,10 @@ export type FormatByteSizePostProcessorFunc = (
 export const stripPointZeroZero: FormatByteSizePostProcessorFunc = (
   num,
   unit
-) => [num.toFixed(2).replace(/\.00$/, ""), unit].join();
+) => [num.toFixed(2).replace(/\.00$/, ""), unit].join("");
 
 export const alwaysTwoDecimals: FormatByteSizePostProcessorFunc = (num, unit) =>
-  [num.toFixed(2), unit].join();
+  [num.toFixed(2), unit].join("");
 
 /**
  * Formats a given number of bytes in a human readable format
