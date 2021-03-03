@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc -p .",
     "publish-patch": "npm run build && npm version patch && npm publish --access public",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ts-node node_modules/jasmine/bin/jasmine --config=jasmine.json",
+    "coverage": "nyc -r text -e .ts -x \"tests/*.test.ts\" npm run test"
   },
   "keywords": [
     "byte",
@@ -20,6 +21,8 @@
   },
   "license": "WTFPL",
   "devDependencies": {
+    "@types/jasmine": "^3.6.4",
+    "jasmine": "^3.6.4",
     "typescript": "^4.2.2"
   },
   "bugs": {
