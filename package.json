@@ -1,0 +1,21 @@
+{
+  "name": "@theredhead/formatbytesize",
+  "version": "1.0.0",
+  "description": "Format bytes in a human readable way without giving up on flexibility",
+  "main": "dist/formatByteSize.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "byte",
+    "bytes",
+    "formatting",
+    "formatter"
+  ],
+  "author": "kris@theredhead.nl",
+  "license": "WTFPL",
+  "devDependencies": {
+    "typescript": "^4.2.2"
+  }
+}
