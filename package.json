@@ -1,6 +1,6 @@
 {
   "name": "@theredhead/formatbytesize",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Format bytes in a human readable way without giving up on flexibility",
   "main": "dist/formatByteSize.js",
   "scripts": {
