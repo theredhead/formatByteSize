@@ -24,13 +24,12 @@
   "devDependencies": {
     "@types/jasmine": "^3.6.4",
     "jasmine": "^3.6.4",
-    "typescript": "^4.2.2"
+    "typescript": "^4.2.2",
+    "nyc": "^15.1.0"
   },
   "bugs": {
     "url": "https://github.com/theredhead/formatByteSize/issues"
   },
   "homepage": "https://github.com/theredhead/formatByteSize#readme",
-  "dependencies": {
-    "nyc": "^15.1.0"
-  }
+  "dependencies": {}
 }
