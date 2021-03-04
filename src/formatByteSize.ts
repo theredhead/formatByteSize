@@ -5,6 +5,11 @@ export type FormatByteSizePostProcessorFunc = (
   unit: string
 ) => string;
 
+export interface FormatByteSizeOptions {
+  postProcessor?: FormatByteSizePostProcessorFunc;
+  kilo?: 1000 | 1024;
+}
+
 export const stripPointZeroZero: FormatByteSizePostProcessorFunc = (
   num,
   unit
@@ -15,15 +20,21 @@ export const alwaysTwoDecimals: FormatByteSizePostProcessorFunc = (num, unit) =>
 
 /**
  * Formats a given number of bytes in a human readable format
- *
- * @param numberOfBytes: number
- * @param kilo: number
  */
 export const formatByteSize = (
   numberOfBytes: number,
-  kilo: 1000 | 1024 = 1024,
-  postProcess: FormatByteSizePostProcessorFunc = stripPointZeroZero
+  options: FormatByteSizeOptions = {}
 ): string => {
+  const defaultOptions = {
+    kilo: 1024,
+    postProcessor: stripPointZeroZero,
+  };
+
+  const theOptions = {
+    kilo: options.kilo ?? defaultOptions.kilo,
+    postProcessor: options.postProcessor ?? defaultOptions.postProcessor,
+  };
+
   let theNumber = numberOfBytes;
   // just because all storage in some of these ranges doesn't exist
   // today, does not mean we cannot reason about them.
@@ -42,10 +53,10 @@ export const formatByteSize = (
   ].reverse();
 
   let index = 0;
-  while (theNumber >= kilo && index < knownUnits.length - 1) {
-    theNumber = theNumber / kilo;
+  while (theNumber >= theOptions.kilo && index < knownUnits.length - 1) {
+    theNumber = theNumber / theOptions.kilo;
     index++;
   }
 
-  return postProcess(theNumber, knownUnits[index]);
+  return theOptions.postProcessor(theNumber, knownUnits[index]);
 };
