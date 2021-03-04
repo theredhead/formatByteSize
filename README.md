@@ -1,4 +1,7 @@
-- [Purpose](#purpose)
+# function formatByteSize(n: number): string
+
+- [function formatByteSize(n: number): string](#function-formatbytesizen-number-string)
+  - [Purpose](#purpose)
   - [Installing](#installing)
   - [Simple usage](#simple-usage)
   - [Advanced usage](#advanced-usage)
@@ -8,7 +11,7 @@
     - [Built-in post processors](#built-in-post-processors)
       - [Using `alwaysTwoDecimals`](#using-alwaystwodecimals)
 
-# Purpose
+## Purpose
 
 Providing human readable file sizes.
 
